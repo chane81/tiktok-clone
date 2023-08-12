@@ -36,7 +36,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
     super.dispose();
   }
 
-  bool _isPasswordValid() {
+  bool _isPasswordValidLength() =>
+      _password.length >= 8 && _password.length <= 20;
+  bool _isPasswordValidAll() {
     final regExp = RegExp(
       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,20}$',
     );
@@ -49,7 +51,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (!_isPasswordValid()) return;
+    if (!_isPasswordValidAll()) return;
 
     Navigator.push(
         context,
@@ -147,8 +149,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 FaIcon(
                   FontAwesomeIcons.circleCheck,
                   size: Sizes.size20,
-                  color:
-                      _isPasswordValid() ? Colors.green : Colors.grey.shade400,
+                  color: _isPasswordValidLength()
+                      ? Colors.green
+                      : Colors.grey.shade400,
                 ),
                 Gaps.h5,
                 const Text('8 to 20 characters'),
@@ -158,15 +161,16 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 FaIcon(
                   FontAwesomeIcons.circleCheck,
                   size: Sizes.size20,
-                  color:
-                      _isPasswordValid() ? Colors.green : Colors.grey.shade400,
+                  color: _isPasswordValidAll()
+                      ? Colors.green
+                      : Colors.grey.shade400,
                 ),
                 Gaps.h5,
                 const Text('Letters, numbers, and special characters'),
               ]),
               Gaps.v16,
               FormButton(
-                disabled: !_isPasswordValid(),
+                disabled: !_isPasswordValidAll(),
                 onTab: _onSubmit,
               ),
             ],
