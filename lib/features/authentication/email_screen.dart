@@ -89,7 +89,7 @@ class _EmailScreenState extends State<EmailScreen> {
               TextField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
-                // onEditingComplete: _onSubmit,
+                onEditingComplete: _onSubmit,
                 autocorrect: false,
                 decoration: InputDecoration(
                   hintText: 'Email',
