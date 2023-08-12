@@ -93,8 +93,6 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 controller: _passwordController,
                 onEditingComplete: _onSubmit,
                 decoration: InputDecoration(
-                  // prefixIcon: const Icon(Icons.lock),
-                  // suffixIcon: const Icon(Icons.visibility),
                   suffix: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
