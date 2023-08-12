@@ -37,7 +37,11 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   bool _isPasswordValid() {
-    return _password.isNotEmpty && _password.length >= 8;
+    final regExp = RegExp(
+      r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,20}$',
+    );
+
+    return _password.isNotEmpty && regExp.hasMatch(_password);
   }
 
   void _onScaffoldTap() {
@@ -148,6 +152,17 @@ class _PasswordScreenState extends State<PasswordScreen> {
                 ),
                 Gaps.h5,
                 const Text('8 to 20 characters'),
+              ]),
+              Gaps.v10,
+              Row(children: [
+                FaIcon(
+                  FontAwesomeIcons.circleCheck,
+                  size: Sizes.size20,
+                  color:
+                      _isPasswordValid() ? Colors.green : Colors.grey.shade400,
+                ),
+                Gaps.h5,
+                const Text('Letters, numbers, and special characters'),
               ]),
               Gaps.v16,
               FormButton(
