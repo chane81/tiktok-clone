@@ -24,3 +24,20 @@ $ dart fix --dry-run
 # or
 $ dart fix --apply
 ```
+
+---
+
+# Learned & Keyword
+
+### Authentication Chapter
+
+- CupertinoDatePicker
+- Form
+- TextField
+- TextFormField
+- SafeArea
+- BottomAppBar
+- GlobalKey & FormKey validate
+- Keyboard I/O - cmd + k (menu > I/O > keyborard)
+- TextEditingController
+- FocusScope
