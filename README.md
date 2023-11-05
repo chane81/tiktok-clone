@@ -11,6 +11,9 @@
 ## package
 
 ```bash
+# flutter package pub
+fvm flutter pub get
+
 # icon - font awesome
 $ fvm flutter pub add font_awesome_flutter:10.3.0
 ```
