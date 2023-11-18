@@ -3,16 +3,19 @@
 ## 환경
 
 - flutter version
-  - 3.10.6
+  - 3.16.0
 - dart
-  - 3.0.7
+  - 3.2.0
 - fvm use
 
 ## package
 
 ```bash
 # flutter package pub
-fvm flutter pub get
+$ fvm flutter pub get
+
+# flutter package outdated list
+$ fvm flutter pub outdated
 
 # icon - font awesome
 $ fvm flutter pub add font_awesome_flutter:10.3.0
