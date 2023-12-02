@@ -47,3 +47,10 @@ $ dart fix --apply
 - Keyboard I/O - cmd + k (menu > I/O > keyborard)
 - TextEditingController
 - FocusScope
+
+### Onboarding
+
+- SingleChildScrollView
+- AnimatedOpacity
+- GestureDetector
+- AnimatedCrossFade <-> GestureDetector
