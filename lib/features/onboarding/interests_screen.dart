@@ -64,7 +64,7 @@ class _InterestsScreenState extends State<InterestsScreen> {
         elevation: 2,
         color: Colors.white,
         padding: const EdgeInsets.all(
-          Sizes.size16 + Sizes.size2,
+          Sizes.size16,
         ),
         child: GestureDetector(
           onTap: _onNextTap,
