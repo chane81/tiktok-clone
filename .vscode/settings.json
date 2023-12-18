@@ -1,5 +1,5 @@
 {
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "bottom",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
