@@ -37,10 +37,11 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
   }
 
   void _onNextTap() {
-    Navigator.of(context).push(
+    Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(
         builder: (context) => const InterestsScreen(),
       ),
+      (route) => false,
     );
   }
 
@@ -51,6 +52,7 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
         title: const Text(
           'Sign up',
         ),
+        elevation: 5,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: Sizes.size36),

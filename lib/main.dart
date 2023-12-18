@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
+import 'package:tiktok_clone/features/authentication/sign_up_screen.dart';
 import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 void main() {
@@ -16,12 +17,12 @@ class TikTokApp extends StatelessWidget {
       theme: ThemeData(
         bottomAppBarTheme: const BottomAppBarTheme(
           color: Colors.white,
-          surfaceTintColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
         ),
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xFFE9435A),
         appBarTheme: const AppBarTheme(
-          surfaceTintColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
           foregroundColor: Colors.black,
           backgroundColor: Colors.white,
           elevation: 0,
